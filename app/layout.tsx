@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Shubham Jaiswal — Portfolio",
     description:
       "Projects and experience by Shubham Jaiswal, a full-stack developer specializing in building clean and scalable web applications.",
-    url: "",
+    url: "https://portfolio-sjs-projects-b7cbde07.vercel.app",
     siteName: "Shubham Jaiswal",
     images: [
       {
