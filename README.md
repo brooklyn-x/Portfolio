@@ -20,16 +20,10 @@ A personal portfolio website built with **Next.js** showcasing my projects, expe
 ## 🔗 Live Demo  
 
 
-## 🖼️ Open Graph Preview
-
-\`\`\`txt
-public/og-image.png
-\`\`\`
-Used for link previews on social platforms (Facebook, Twitter, WhatsApp, etc.).
 
 ## 📄 Scripts
 
-\`\`\`bash
+```bash
 # Install dependencies
 npm install
 
@@ -41,10 +35,11 @@ npm run build
 
 # Start production server
 npm start
-\`\`\`
+```
 
 ## 📌 Folder Structure
-\`\`\`bash
+
+```bash
 .
 ├── app/               # Next.js app directory
 ├── components/        # Reusable components
@@ -52,5 +47,7 @@ npm start
 ├── styles/            # Global styles
 ├── README.md
 └── ...
-\`\`\`
+```
+```
+
 
