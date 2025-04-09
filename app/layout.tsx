@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Shubham Jaiswal",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://portfolio-sjs-projects-b7cbde07.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Shubham Jaiswal Portfolio",
