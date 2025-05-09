@@ -1,5 +1,5 @@
 import { Label } from "./Label";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
@@ -35,7 +35,7 @@ const ProjectItem = ({ label, about, link }: ProjectProps) => {
         {about}
       </span>
       <span className="absolute top-2 right-2">
-        <ArrowRightIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition duration-200 ease-in-out hover:scale-110 transform" />
+        <ArrowRight className="h-4 w-4 text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition duration-200 ease-in-out hover:scale-110 transform" />
       </span>
     </a>
   );

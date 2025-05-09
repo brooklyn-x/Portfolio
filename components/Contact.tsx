@@ -1,6 +1,6 @@
 
 import { Label } from "./Label";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { ArrowUpRight } from "lucide-react";
 
 const contacts = [
   { label: "Email", link: "mailto:shubham.jaiswal020@gmail.com" },
@@ -11,7 +11,7 @@ const contacts = [
 
 type ContactProps = {
   label: string;
-  link: string; 
+  link: string;
 };
 
 export const ContactItem = ({ label, link }: ContactProps) => {
@@ -28,7 +28,7 @@ export const ContactItem = ({ label, link }: ContactProps) => {
         </p>
 
         <div className="flex-shrink-0">
-          <ArrowUpRightIcon className="h-4 w-4 dark:text-white group-hover:text-white dark:group-hover:text-black transform group-hover:scale-110 transition duration-200 ease-in-out" />
+          <ArrowUpRight className="h-4 w-4 dark:text-white group-hover:text-white dark:group-hover:text-black transform group-hover:scale-110 transition duration-200 ease-in-out" />
         </div>
       </div>
     </a>

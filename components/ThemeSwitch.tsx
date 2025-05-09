@@ -1,5 +1,5 @@
 "use client";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { MoonIcon, SunIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ThemeSwitch() {
