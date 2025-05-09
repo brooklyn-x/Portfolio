@@ -13,7 +13,7 @@ const Experiences = [
   },
 ];
 
-type ExprienceProps = {
+type ExperienceProps = {
   company: string;
   label: string;
   duration: string;
@@ -23,16 +23,20 @@ export const ExperienceItem = ({
   company,
   label,
   duration,
-}: ExprienceProps) => {
+}: ExperienceProps) => {
   return (
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-2">
-        <p className="text-sm font-medium text-neutral-800">{company}</p>
-        <span className="text-sm font-light text-neutral-500/80">
+        <p className="text-sm font-medium text-neutral-800 dark:text-white">
+          {company}
+        </p>
+        <span className="text-sm font-base text-neutral-500/80 dark:text-neutral-400/80">
           {duration}
         </span>
       </div>
-      <p className="text-sm font-medium text-neutral-500">{label}</p>
+      <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+        {label}
+      </p>
     </div>
   );
 };
@@ -55,5 +59,3 @@ export const Experience = () => {
     </section>
   );
 };
-
-

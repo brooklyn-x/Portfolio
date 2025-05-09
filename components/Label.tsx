@@ -3,5 +3,9 @@ type LabelProps = {
 };
 
 export const Label = ({ label }: LabelProps) => {
-  return <h2 className="font-semibold mb-4 text-sm text-black">{label}</h2>;
+  return (
+    <h2 className="font-semibold mb-4 text-sm text-black dark:text-white">
+      {label}
+    </h2>
+  );
 };

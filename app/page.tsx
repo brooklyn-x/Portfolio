@@ -6,8 +6,8 @@ import { TimeStamp } from "../components/TimeStamp";
 
 const Page = () => {
   return (
-    <div className="min-h-dvh bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:12px_12px] flex items-center justify-center">
-      <div className="max-w-xl mx-auto w-full p-4 sm:p-8 font-sans">
+    <div className="min-h-dvh  flex items-center justify-center bg-white/80 dark:bg-neutral-950 transition-colors duration-300">
+      <div className="max-w-xl mx-auto w-full p-4 sm:p-8">
         <Main />
         <Experience />
         <Projects />

@@ -21,7 +21,7 @@ export const TimeStamp = () => {
   }, []);
 
   return (
-    <section className="pt-8 text-xs text-neutral-500 text-center">
+    <section className="pt-8 text-xs text-neutral-500 dark:text-neutral-400 text-center">
       {currentTime}
     </section>
   );

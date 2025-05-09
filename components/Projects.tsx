@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Label } from "./Label";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
@@ -26,18 +26,16 @@ const ProjectItem = ({ label, about, link }: ProjectProps) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex flex-col gap-1 rounded-md"
+      className="group relative flex flex-col gap-1 rounded-md hover:scale-105 transform transition duration-200 ease-in-out"
     >
-      <p className="text-sm font-medium text-neutral-800">{label}</p>
-      <span className="text-sm text-neutral-500">{about}</span>
+      <p className="text-sm font-medium text-neutral-800 dark:text-white">
+        {label}
+      </p>
+      <span className="text-sm text-neutral-500 dark:text-neutral-400">
+        {about}
+      </span>
       <span className="absolute top-2 right-2">
-        <Image
-          src="/arrow-right.svg"
-          alt={`Visit ${label}`}
-          height={50}
-          width={50}
-          className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1"
-        />
+        <ArrowRight className="h-4 w-4 text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition duration-200 ease-in-out hover:scale-110 transform" />
       </span>
     </a>
   );

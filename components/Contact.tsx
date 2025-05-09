@@ -1,5 +1,6 @@
-import Image from "next/image";
+
 import { Label } from "./Label";
+import { ArrowUpRight } from "lucide-react";
 
 const contacts = [
   { label: "Email", link: "mailto:shubham.jaiswal020@gmail.com" },
@@ -21,19 +22,13 @@ export const ContactItem = ({ label, link }: ContactProps) => {
       rel="noopener noreferrer"
       className="group cursor-pointer"
     >
-      <div className="flex gap-1 bg-neutral-200/70 group-hover:bg-black px-4 py-1 rounded-full transition duration-200  ease-in-out">
-        <p className="text-sm text-neutral-800 group-hover:text-white transition duration-200 ease-in-out">
+      <div className="flex justify-between items-center gap-1 bg-neutral-200/70 group-hover:bg-black dark:bg-neutral-800/70 dark:group-hover:bg-white px-4 py-1 rounded-full transition duration-200  ease-in-out hover:scale-110 transform">
+        <p className="text-sm text-neutral-800 group-hover:text-white dark:text-white dark:group-hover:text-black transition duration-200 ease-in-out">
           {label}
         </p>
 
         <div className="flex-shrink-0">
-          <Image
-            height={50}
-            width={50}
-            src="/arrow-right.svg"
-            alt="arrow-right"
-            className="h-4 w-4 group-hover:invert transform group-hover:scale-110 transition duration-200 ease-in-out"
-          />
+          <ArrowUpRight className="h-4 w-4 dark:text-white group-hover:text-white dark:group-hover:text-black transform group-hover:scale-110 transition duration-200 ease-in-out" />
         </div>
       </div>
     </a>
@@ -44,7 +39,7 @@ export const Contact = () => {
   return (
     <section className="py-6">
       <Label label="Contact" />
-      <div className="flex items-center gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
         {contacts.map((item, index) => (
           <ContactItem key={index} label={item.label} link={item.link} />
         ))}
