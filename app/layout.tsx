@@ -3,6 +3,7 @@ import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeSwitch from "../components/ThemeSwitch";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -72,7 +73,10 @@ export default function RootLayout({
       </head>
       <body className={`${robotoMono.variable} antialiased`}>
         <ThemeSwitch />
-        {children}
+        <div className="min-h-screen bg-white/80 dark:bg-neutral-950 transition-colors duration-300">
+          {children}
+          <Analytics />
+        </div>
       </body>
     </html>
   );

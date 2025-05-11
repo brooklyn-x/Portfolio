@@ -6,14 +6,13 @@ import { TimeStamp } from "../components/TimeStamp";
 
 const Page = () => {
   return (
-    <div className="min-h-dvh  flex items-center justify-center bg-white/80 dark:bg-neutral-950 transition-colors duration-300">
-      <div className="max-w-xl mx-auto w-full p-4 sm:p-8">
-        <Main />
-        <Experience />
-        <Projects />
-        <Contact />
-        <TimeStamp />
-      </div>
+    
+    <div className="max-w-xl mx-auto w-full h-full p-4 sm:p-8">
+      <Main />
+      <Experience />
+      <Projects />
+      <Contact />
+      <TimeStamp />
     </div>
   );
 };
