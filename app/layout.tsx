@@ -1,9 +1,10 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeSwitch from "../components/ThemeSwitch";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next";
+
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
