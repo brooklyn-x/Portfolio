@@ -10,7 +10,7 @@ const projects = [
   {
     label: "SmartBuy",
     description: "Modern e-commerce app.",
-    link: "https://ecomerce-pi-one.vercel.app",
+    link: "https://smartbuyx.netlify.app",
   },
 ];
 

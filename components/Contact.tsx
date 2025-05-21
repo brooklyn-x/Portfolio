@@ -3,9 +3,9 @@ import { Label } from "./Label";
 import { ArrowUpRight } from "lucide-react";
 
 const contacts = [
-  { label: "Email", link: "mailto:shubham.jaiswal020@gmail.com" },
+  { label: "Email", link: "mailto:shubhamjaiswalx@hotmail.com" },
   { label: "X", link: "https://x.com/shubhamxgg" },
-  { label: "GitHub", link: "https://github.com/Brooklyn7x" },
+  { label: "GitHub", link: "https://github.com/shubhamxgg" },
   { label: "LinkedIn", link: "https://www.linkedin.com/in/shubhamjaiswalx/" },
 ];
 
