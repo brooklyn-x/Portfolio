@@ -6,8 +6,7 @@ import { TimeStamp } from "../components/TimeStamp";
 
 const Page = () => {
   return (
-    
-    <div className="max-w-xl mx-auto w-full h-full p-4 sm:p-8">
+    <div className="max-w-xl mx-auto w-full h-full p-4 sm:p-8 overflow-hidden">
       <Main />
       <Experience />
       <Projects />

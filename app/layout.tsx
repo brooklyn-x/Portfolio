@@ -1,15 +1,14 @@
-import { Analytics } from "@vercel/analytics/next";
-import type { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import ThemeSwitch from "../components/ThemeSwitch";
-import Script from "next/script";
-
+import { Roboto_Mono } from "next/font/google";
 
 const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "300",
+  variable: "--font-roboto-mono",
 });
 
 export const metadata: Metadata = {
@@ -35,11 +34,11 @@ export const metadata: Metadata = {
     title: "Shubham Jaiswal — Portfolio",
     description:
       "Projects and experience by Shubham Jaiswal, a full-stack developer specializing in building clean and scalable web applications.",
-    url: "https://portfolio-sjs-projects-b7cbde07.vercel.app",
+    url: "https://www.shubhamz.xyz",
     siteName: "Shubham Jaiswal",
     images: [
       {
-        url: "https://portfolio-sjs-projects-b7cbde07.vercel.app/og-image.png",
+        url: "https://www.shubhamz.xyz/og-image.png",
         width: 1200,
         height: 630,
         alt: "Shubham Jaiswal Portfolio",
@@ -55,29 +54,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <Script id="theme-init" strategy="beforeInteractive">
-          {`
-            (function () {
-              try {
-                const theme = localStorage.getItem('theme');
-                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  document.documentElement.classList.remove('dark');
-                }
-              } catch (_) {}
-            })();
-          `}
-        </Script>
-      </head>
-      <body className={`${robotoMono.variable} antialiased`}>
-        <ThemeSwitch />
-        <div className="min-h-screen bg-white/80 dark:bg-neutral-950 transition-colors duration-300">
-          {children}
-          <Analytics />
-        </div>
+    <html lang="en" className={robotoMono.className} suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen bg-white/80 dark:bg-neutral-950 transition-colors duration-300">
+            <ThemeSwitch />
+            {children}
+            <Analytics />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
