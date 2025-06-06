@@ -3,7 +3,5 @@
   compatibility_date = "2025-03-25"
   compatibility_flags = ["nodejs_compat"]
   [assets]
-  [build.environment]
-  NODE_VERSION = "20"
   directory = ".open-next/assets"
   binding = "ASSETS"
