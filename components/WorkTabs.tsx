@@ -299,6 +299,12 @@ export const WorkTabs = () => {
     { id: "blog" as TabType, label: "Blog" },
   ];
 
+  // Get the current tab label for the section header
+  const getCurrentLabel = () => {
+    const currentTab = tabs.find((tab) => tab.id === activeTab);
+    return currentTab ? currentTab.label : "Work";
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case "work":
@@ -366,7 +372,7 @@ export const WorkTabs = () => {
 
   return (
     <section className="py-6">
-      <Label label="Work" />
+      <Label label={getCurrentLabel()} />
 
       {/* Tab Navigation - More Rounded */}
       <div className="flex gap-1 mb-6 p-1 bg-neutral-100 dark:bg-neutral-900 rounded-2xl">
