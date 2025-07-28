@@ -2,9 +2,14 @@ import { Label } from "./Label";
 
 const Experiences = [
   {
+    company: "SweepCode",
+    label: "Full-stack development with modern web technologies.",
+    duration: "Jan 2025 - now",
+  },
+  {
     company: "LetsGo",
     label: "Designing & developing user-facing features for the app.",
-    duration: "2024 - now",
+    duration: "2024 - 2025",
   },
   {
     company: "RKCP",

@@ -1,6 +1,7 @@
+"use client";
+
 import { Main } from "../components/Main";
-import { Experience } from "../components/Experience";
-import { Projects } from "../components/Projects";
+import { WorkTabs } from "../components/WorkTabs";
 import { Contact } from "../components/Contact";
 import { TimeStamp } from "../components/TimeStamp";
 
@@ -8,8 +9,8 @@ const Page = () => {
   return (
     <div className="max-w-xl mx-auto w-full h-full p-4 sm:p-8 overflow-hidden">
       <Main />
-      <Experience />
-      <Projects />
+      {/* <Experience /> */}
+      <WorkTabs />
       <Contact />
       <TimeStamp />
     </div>
