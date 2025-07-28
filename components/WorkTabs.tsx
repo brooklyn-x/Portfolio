@@ -36,7 +36,7 @@ const workExperience = [
   {
     company: "LetsGo",
     label: "Designing & developing user-facing features for the app.",
-    duration: "2024 - now",
+    duration: "2024 - 2025",
   },
   {
     company: "RKCP",
@@ -116,16 +116,16 @@ const ProjectItem = ({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex flex-col gap-1 rounded-md hover:scale-105 transform transition duration-200 ease-in-out"
+      className="group relative flex flex-col gap-1 rounded-md p-3 hover:bg-neutral-50 dark:hover:bg-neutral-900/50 hover:scale-[1.02] transform transition-all duration-200 ease-in-out"
     >
-      <p className="text-sm font-medium text-neutral-800 dark:text-white">
+      <p className="text-sm font-medium text-neutral-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
         {label}
       </p>
       <span className="text-sm text-neutral-500 dark:text-neutral-400">
         {description}
       </span>
-      <span className="absolute top-2 right-2">
-        <ArrowRight className="h-4 w-4 text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition duration-200 ease-in-out hover:scale-110 transform" />
+      <span className="absolute top-3 right-3">
+        <ArrowRight className="h-4 w-4 text-neutral-500 dark:text-neutral-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200 ease-in-out" />
       </span>
     </a>
   );
