@@ -10,19 +10,35 @@ import {
   Clock,
 } from "lucide-react";
 
-// Projects data (your existing projects)
+// Enhanced projects data with detailed descriptions
 const projects = [
   {
-    label: "Chatly",
-    description: "Real-time chat app with a clean UI.",
+    label: "Chatly - Real-time Chat Application",
+    description:
+      "A modern real-time chat application built with React, Node.js, and Socket.io. Features include real-time messaging, user authentication, message history, and responsive design. Demonstrates expertise in WebSocket implementation and real-time data synchronization.",
     link: "https://www.chatlyz.xyz",
     type: "project",
+    technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express.js"],
+    features: [
+      "Real-time messaging",
+      "User authentication",
+      "Message history",
+      "Responsive design",
+    ],
   },
   {
-    label: "SmartBuy",
-    description: "Modern e-commerce app.",
+    label: "SmartBuy - E-commerce Platform",
+    description:
+      "A comprehensive e-commerce application featuring product catalog, shopping cart, payment integration, and user management. Built with modern web technologies focusing on performance, security, and user experience. Showcases full-stack development skills and e-commerce best practices.",
     link: "https://smartbuyx.netlify.app",
     type: "project",
+    technologies: ["React", "Next.js", "Node.js", "PostgreSQL", "Stripe API"],
+    features: [
+      "Product catalog",
+      "Shopping cart",
+      "Payment processing",
+      "User management",
+    ],
   },
 ];
 
@@ -106,10 +122,12 @@ const ProjectItem = ({
   label,
   description,
   link,
+  technologies,
 }: {
   label: string;
   description: string;
   link: string;
+  technologies: string[];
 }) => {
   return (
     <a
@@ -127,6 +145,16 @@ const ProjectItem = ({
       <span className="absolute top-3 right-3">
         <ArrowRight className="h-4 w-4 text-neutral-500 dark:text-neutral-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200 ease-in-out" />
       </span>
+      <div className="flex flex-wrap gap-1 mt-2">
+        {technologies.map((tech, index) => (
+          <span
+            key={index}
+            className="text-xs px-2 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 rounded-md"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
     </a>
   );
 };
@@ -326,6 +354,7 @@ export const WorkTabs = () => {
             {projects.map((project, index) => (
               <ProjectItem
                 key={index}
+                technologies={project.technologies}
                 label={project.label}
                 description={project.description}
                 link={project.link}
