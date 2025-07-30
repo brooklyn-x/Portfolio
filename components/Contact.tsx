@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 const contacts = [
   { label: "Email", link: "mailto:shubhamjaiswalx@hotmail.com" },
   { label: "X", link: "https://x.com/shubhamxgg" },
-  { label: "GitHub", link: "https://github.com/shubhamxgg" },
+  { label: "GitHub", link: "https://github.com/brooklyn-x" },
   { label: "LinkedIn", link: "https://www.linkedin.com/in/shubhamjaiswalx/" },
 ];
 
