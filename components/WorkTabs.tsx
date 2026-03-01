@@ -2,13 +2,7 @@
 
 import { useState } from "react";
 import { Label } from "./Label";
-import {
-  ArrowRight,
-  Github,
-  ExternalLink,
-  Calendar,
-  Clock,
-} from "lucide-react";
+import { ArrowRight, Github, ExternalLink } from "lucide-react";
 
 // Enhanced projects data with detailed descriptions
 const projects = [
@@ -82,36 +76,6 @@ const labs = [
  
 ];
 
-// Blog posts data
-const blogPosts = [
-  {
-    title: "Building Scalable React Applications",
-    description:
-      "Best practices for structuring large React apps with TypeScript and modern tooling.",
-    platform: "Dev.to",
-    date: "Jan 2025",
-    readTime: "8 min read",
-    tags: ["React", "TypeScript", "Architecture"],
-  },
-  {
-    title: "Optimizing Next.js Performance",
-    description:
-      "Techniques for improving Core Web Vitals and user experience in Next.js applications.",
-    platform: "Medium",
-    date: "Dec 2024",
-    readTime: "12 min read",
-    tags: ["Next.js", "Performance", "Web Vitals"],
-  },
-  {
-    title: "Understanding Redis for Node.js Developers",
-    description:
-      "A comprehensive guide to integrating Redis for caching and session management.",
-    platform: "Hashnode",
-    date: "Nov 2024",
-    readTime: "15 min read",
-    tags: ["Redis", "Node.js", "Backend"],
-  },
-];
 
 type TabType = "work" | "projects" | "labs" | "blog";
 
@@ -261,62 +225,6 @@ const LabItem = ({
   );
 };
 
-// Blog Item Component
-const BlogItem = ({
-  title,
-  description,
-  platform,
-  date,
-  readTime,
-  tags,
-}: {
-  title: string;
-  description: string;
-  platform: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-}) => {
-  return (
-    <div className="flex flex-col gap-2 rounded-md p-3">
-      <div className="flex items-start justify-between">
-        <div className="flex-1">
-          <p className="text-sm font-medium text-neutral-800 dark:text-white">
-            {title}
-          </p>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
-            {description}
-          </p>
-
-          <div className="flex items-center gap-3 mt-2 text-xs text-neutral-400 dark:text-neutral-500">
-            <span className="flex items-center gap-1">
-              <Calendar className="h-3 w-3" />
-              {date}
-            </span>
-            <span className="flex items-center gap-1">
-              <Clock className="h-3 w-3" />
-              {readTime}
-            </span>
-            <span className="text-neutral-500 dark:text-neutral-400">
-              on {platform}
-            </span>
-          </div>
-
-          <div className="flex flex-wrap gap-1 mt-2">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-md"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const WorkTabs = () => {
   const [activeTab, setActiveTab] = useState<TabType>("work");
