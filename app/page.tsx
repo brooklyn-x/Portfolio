@@ -1,5 +1,3 @@
-"use client";
-
 import { Main } from "../components/Main";
 import { WorkTabs } from "../components/WorkTabs";
 import { Contact } from "../components/Contact";

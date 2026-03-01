@@ -13,31 +13,31 @@ import {
 // Enhanced projects data with detailed descriptions
 const projects = [
   {
-    label: "Chatly - Real-time Chat Application",
+    label: "NUUM — Creator Management Platform",
     description:
-      "A modern real-time chat application built with React, Node.js, and Socket.io. Features include real-time messaging, user authentication, message history, and responsive design. Demonstrates expertise in WebSocket implementation and real-time data synchronization.",
-    link: "https://www.chatlyz.xyz",
+      "A SaaS platform for brands and agencies to manage influencer and UGC marketing campaigns end-to-end. Like a CRM, but built specifically for the creator economy.",
+    link: "",
     type: "project",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express.js"],
+    technologies: ["React", "TypeScript", "Express.js", "Firebase", "Stripe", "Shopify API"],
     features: [
-      "Real-time messaging",
-      "User authentication",
-      "Message history",
-      "Responsive design",
+      "Campaign management",
+      "Creator CRM",
+      "UGC tracking",
+      "Brand & agency portals",
     ],
   },
   {
-    label: "SmartBuy - E-commerce Platform",
+    label: "NBS Fitness - Fitness Management SaaS",
     description:
-      "A comprehensive e-commerce application featuring product catalog, shopping cart, payment integration, and user management. Built with modern web technologies focusing on performance, security, and user experience. Showcases full-stack development skills and e-commerce best practices.",
-    link: "https://smartbuyx.netlify.app",
+      "A full-stack fitness SaaS connecting coaches with their clients. Handles everything from personalized workout planning to real-time progress tracking.",
+    link: "",
     type: "project",
-    technologies: ["React", "Next.js", "Node.js", "PostgreSQL", "Stripe API"],
+    technologies: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Stripe API"],
     features: [
-      "Product catalog",
-      "Shopping cart",
-      "Payment processing",
-      "User management",
+      "Role-based portals",
+      "Automated workout progressions",
+      "Client completion tracking",
+      "Subscription management",
     ],
   },
 ];
@@ -46,17 +46,17 @@ const projects = [
 const workExperience = [
   {
     company: "SweepCode",
-    label: "Full-stack development with modern web technologies.",
+    label: "Full-stack Engineer",
     duration: "Jan 2025 - now",
   },
   {
     company: "LetsGo",
-    label: "Designing & developing user-facing features for the app.",
+    label: "Full-stack Engineer",
     duration: "2024 - 2025",
   },
   {
     company: "RKCP",
-    label: "Crafted responsive UI & optimized web performance",
+    label: "Frontend Engineer",
     duration: "2023 - 2024",
   },
 ];
@@ -64,21 +64,22 @@ const workExperience = [
 // Labs/Experiments data
 const labs = [
   {
-    label: "API Rate Limiter",
-    description: "Redis-based rate limiting middleware for Express.js",
-    tech: ["Node.js", "Redis", "TypeScript"],
-    githubLink: "https://github.com/yourusername/rate-limiter",
+    label: "AI Commit Message Generator",
+    description: "Paste a git diff, get a clean commit message instantly. Powered by OpenAI.",
+    tech: ["React", "TypeScript", "OpenAI API"],
+    githubLink: "",
     liveLink: null,
     type: "lab",
   },
   {
-    label: "CSS Grid Playground",
-    description: "Interactive tool for learning CSS Grid properties",
-    tech: ["React", "CSS", "Vanilla JS"],
-    githubLink: "https://github.com/yourusername/css-grid-playground",
-    liveLink: "https://css-grid-playground.vercel.app",
+    label: "SnapPaste — Expiring Code Snippets",
+    description: "Share code snippets that self-destruct after X views or a set time. Syntax highlighting included.",
+    tech: ["React", "Node.js", "Redis", "TypeScript"],
+    githubLink: "",
+    liveLink: null,
     type: "lab",
   },
+ 
 ];
 
 // Blog posts data
@@ -88,7 +89,6 @@ const blogPosts = [
     description:
       "Best practices for structuring large React apps with TypeScript and modern tooling.",
     platform: "Dev.to",
-    link: "https://dev.to/yourusername/building-scalable-react-applications",
     date: "Jan 2025",
     readTime: "8 min read",
     tags: ["React", "TypeScript", "Architecture"],
@@ -98,7 +98,6 @@ const blogPosts = [
     description:
       "Techniques for improving Core Web Vitals and user experience in Next.js applications.",
     platform: "Medium",
-    link: "https://medium.com/@yourusername/optimizing-nextjs-performance",
     date: "Dec 2024",
     readTime: "12 min read",
     tags: ["Next.js", "Performance", "Web Vitals"],
@@ -108,7 +107,6 @@ const blogPosts = [
     description:
       "A comprehensive guide to integrating Redis for caching and session management.",
     platform: "Hashnode",
-    link: "https://yourusername.hashnode.dev/understanding-redis-nodejs",
     date: "Nov 2024",
     readTime: "15 min read",
     tags: ["Redis", "Node.js", "Backend"],
@@ -129,22 +127,19 @@ const ProjectItem = ({
   link: string;
   technologies: string[];
 }) => {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative flex flex-col gap-1 rounded-md p-3 hover:bg-neutral-50 dark:hover:bg-neutral-900/50 hover:scale-[1.02] transform transition-all duration-200 ease-in-out"
-    >
+  const content = (
+    <>
       <p className="text-sm font-medium text-neutral-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
         {label}
       </p>
       <span className="text-sm text-neutral-500 dark:text-neutral-400">
         {description}
       </span>
-      <span className="absolute top-3 right-3">
-        <ArrowRight className="h-4 w-4 text-neutral-500 dark:text-neutral-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200 ease-in-out" />
-      </span>
+      {link && (
+        <span className="absolute top-3 right-3">
+          <ArrowRight className="h-4 w-4 text-neutral-500 dark:text-neutral-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200 ease-in-out" />
+        </span>
+      )}
       <div className="flex flex-wrap gap-1 mt-2">
         {technologies.map((tech, index) => (
           <span
@@ -155,6 +150,25 @@ const ProjectItem = ({
           </span>
         ))}
       </div>
+    </>
+  );
+
+  if (!link) {
+    return (
+      <div className="group relative flex flex-col gap-1 rounded-md p-3">
+        {content}
+      </div>
+    );
+  }
+
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex flex-col gap-1 rounded-md p-3 hover:bg-neutral-50 dark:hover:bg-neutral-900/50 hover:scale-[1.02] transform transition-all duration-200 ease-in-out"
+    >
+      {content}
     </a>
   );
 };
@@ -252,7 +266,6 @@ const BlogItem = ({
   title,
   description,
   platform,
-  link,
   date,
   readTime,
   tags,
@@ -260,28 +273,21 @@ const BlogItem = ({
   title: string;
   description: string;
   platform: string;
-  link: string;
   date: string;
   readTime: string;
   tags: string[];
 }) => {
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative flex flex-col gap-2 rounded-md p-3 hover:bg-neutral-50 dark:hover:bg-neutral-900/50 transition duration-200 ease-in-out hover:scale-[1.02] transform"
-    >
+    <div className="flex flex-col gap-2 rounded-md p-3">
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          <p className="text-sm font-medium text-neutral-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          <p className="text-sm font-medium text-neutral-800 dark:text-white">
             {title}
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
             {description}
           </p>
 
-          {/* Meta info */}
           <div className="flex items-center gap-3 mt-2 text-xs text-neutral-400 dark:text-neutral-500">
             <span className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
@@ -296,7 +302,6 @@ const BlogItem = ({
             </span>
           </div>
 
-          {/* Tags */}
           <div className="flex flex-wrap gap-1 mt-2">
             {tags.map((tag, index) => (
               <span
@@ -308,12 +313,8 @@ const BlogItem = ({
             ))}
           </div>
         </div>
-
-        <div className="ml-4">
-          <ExternalLink className="h-4 w-4 text-neutral-400 dark:text-neutral-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
-        </div>
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -324,7 +325,7 @@ export const WorkTabs = () => {
     { id: "work" as TabType, label: "Work" },
     { id: "projects" as TabType, label: "Projects" },
     { id: "labs" as TabType, label: "Labs" },
-    { id: "blog" as TabType, label: "Blog" },
+    // { id: "blog" as TabType, label: "Blog" },
   ];
 
   // Get the current tab label for the section header
@@ -377,23 +378,22 @@ export const WorkTabs = () => {
             ))}
           </div>
         );
-      case "blog":
-        return (
-          <div className="flex flex-col gap-4">
-            {blogPosts.map((post, index) => (
-              <BlogItem
-                key={index}
-                title={post.title}
-                description={post.description}
-                platform={post.platform}
-                link={post.link}
-                date={post.date}
-                readTime={post.readTime}
-                tags={post.tags}
-              />
-            ))}
-          </div>
-        );
+      // case "blog":
+      //   return (
+      //     <div className="flex flex-col gap-4">
+      //       {blogPosts.map((post, index) => (
+      //         <BlogItem
+      //           key={index}
+      //           title={post.title}
+      //           description={post.description}
+      //           platform={post.platform}
+      //           date={post.date}
+      //           readTime={post.readTime}
+      //           tags={post.tags}
+      //         />
+      //       ))}
+      //     </div>
+      //   );
       default:
         return null;
     }

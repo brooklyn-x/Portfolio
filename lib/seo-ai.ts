@@ -59,14 +59,14 @@ export function generatePersonStructuredData() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Shubham Jaiswal",
-    jobTitle: "Full-Stack Developer",
+    jobTitle: "Full-Stack Developer & AI Engineer",
     description:
-      "Experienced full-stack developer specializing in React, Next.js, Node.js, and modern web technologies",
+      "Full-stack developer and AI engineer building web apps and AI-powered products with React, Next.js, Node.js, and LLM integrations. Available for freelance. Based in India.",
     url: "https://www.shubhamz.xyz",
     sameAs: [
-      "https://github.com/shubhamjaiswal",
-      "https://linkedin.com/in/shubhamjaiswal",
-      // Add your social media profiles
+      "https://github.com/brooklyn-x",
+      "https://www.linkedin.com/in/shubhamjaiswalx/",
+      "https://x.com/shubhamxgg",
     ],
     knowsAbout: [
       "React.js",
@@ -77,11 +77,15 @@ export function generatePersonStructuredData() {
       "Full-stack Development",
       "Web Development",
       "Software Engineering",
+      "AI Application Development",
+      "LLM Integration",
+      "Generative AI",
+      "OpenAI API",
+      "RAG Systems",
+      "Web Application Architecture",
+      "API Design",
+      "Database Design",
     ],
-    alumniOf: {
-      "@type": "EducationalOrganization",
-      name: "Your University/College", // Update with your education
-    },
   };
 }
 
@@ -92,18 +96,13 @@ export function generateWebsiteStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Shubham Jaiswal Portfolio",
+    name: "Shubham Jaiswal",
     url: "https://www.shubhamz.xyz",
     description:
-      "Portfolio website showcasing full-stack development projects and expertise",
+      "Portfolio of Shubham Jaiswal — full-stack developer & AI engineer building web apps and AI-powered products with React, Next.js, and Node.js.",
     author: {
       "@type": "Person",
       name: "Shubham Jaiswal",
-    },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://www.shubhamz.xyz/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
     },
   };
 }
@@ -187,7 +186,7 @@ export function generateFAQStructuredData() {
         name: "What technologies does Shubham Jaiswal specialize in?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Shubham specializes in React.js, Next.js, Node.js, TypeScript, JavaScript, and modern full-stack web development technologies.",
+          text: "Shubham specializes in React.js, Next.js, Node.js, TypeScript, and AI application development including LLM integrations, OpenAI API, and RAG systems.",
         },
       },
       {
@@ -195,15 +194,23 @@ export function generateFAQStructuredData() {
         name: "What type of projects does Shubham work on?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Shubham builds scalable web applications, e-commerce platforms, chat applications, and modern responsive websites using the MERN stack.",
+          text: "Shubham builds scalable web applications, SaaS platforms, and AI-powered products — including LLM integrations, creator management tools, and fitness management systems.",
         },
       },
       {
         "@type": "Question",
-        name: "How can I contact Shubham Jaiswal for development work?",
+        name: "Is Shubham Jaiswal available for freelance work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You can reach out through the contact form on this portfolio website or connect via LinkedIn and GitHub.",
+          text: "Yes, Shubham is available for freelance and remote projects. He is based in India and works with clients globally. You can reach out via the contact section on this portfolio.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How can I hire Shubham Jaiswal as a developer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can contact Shubham via email at shubhamjaiswalx@hotmail.com, connect on LinkedIn at linkedin.com/in/shubhamjaiswalx, or reach out on X at @shubhamxgg.",
         },
       },
     ],

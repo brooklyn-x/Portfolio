@@ -13,9 +13,14 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shubham Jaiswal | Full-Stack Developer & Software Engineer",
+  metadataBase: new URL("https://www.shubhamz.xyz"),
+  alternates: {
+    canonical: "/",
+  },
+
+  title: "Shubham Jaiswal — Full-Stack & AI Developer for Hire | React, Next.js · India",
   description:
-    "Experienced full-stack developer specializing in React, Next.js, Node.js, and modern web technologies. Building scalable applications with clean architecture and exceptional user experiences.",
+    "Full-stack developer & AI engineer building web apps and AI-powered products. React, Next.js, Node.js. Available for freelance. Based in India, open to remote.",
   keywords: [
     // Core technical skills
     "Full-stack Developer",
@@ -28,6 +33,21 @@ export const metadata: Metadata = {
     "Backend Developer",
     "Software Engineer",
     "Web Developer",
+
+    // AI & ML keywords
+    "AI Developer",
+    "AI Engineer",
+    "AI-powered applications",
+    "AI product development",
+    "LLM integration",
+    "OpenAI API developer",
+    "Generative AI developer",
+    "ChatGPT integration",
+    "AI web applications",
+    "Machine Learning integration",
+    "RAG applications",
+    "AI SaaS developer",
+    "Prompt engineering",
 
     // Technologies & frameworks
     "React.js",
@@ -45,54 +65,59 @@ export const metadata: Metadata = {
     "Shubham Jaiswal",
     "Shubham Jaiswal Developer",
     "Shubham Jaiswal Portfolio",
+    "Shubham Jaiswal AI Developer",
     "Shubham Jaiswal Full-stack",
 
-    // Services & expertise
+    // Services & hire intent
+    "Freelance Full-stack Developer",
+    "Hire React Developer",
+    "Hire Next.js Developer",
+    "Freelance AI Developer",
     "Web Application Development",
     "API Development",
     "Database Design",
-    "UI/UX Implementation",
     "Performance Optimization",
     "Responsive Design",
 
-    // Location-based (if relevant)
+    // Location-based
+    "India AI Developer",
     "India Developer",
+    "Freelance AI Developer India",
+    "Remote AI Developer",
     "Remote Developer",
   ],
   authors: [{ name: "Shubham Jaiswal" }],
   creator: "Shubham Jaiswal",
   publisher: "Shubham Jaiswal",
 
-  // Enhanced Open Graph
   openGraph: {
-    title: "Shubham Jaiswal — Full-Stack Developer & Software Engineer",
+    title: "Shubham Jaiswal — Full-Stack & AI Developer | React, Next.js",
     description:
-      "Experienced full-stack developer specializing in React, Next.js, Node.js, and modern web technologies. Building scalable applications with clean architecture.",
+      "I build web apps and AI-powered products with React, Next.js & Node.js. LLM integrations, scalable APIs, clean UI. Available for freelance — based in India, open to remote.",
     url: "https://www.shubhamz.xyz",
-    siteName: "Shubham Jaiswal Portfolio",
+    siteName: "Shubham Jaiswal",
     images: [
       {
-        url: "https://www.shubhamz.xyz/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Shubham Jaiswal - Full-Stack Developer Portfolio",
+        alt: "Shubham Jaiswal — Full-Stack & AI Developer, React & Next.js specialist",
+        type: "image/png",
       },
     ],
     type: "website",
     locale: "en_US",
   },
 
-  // Twitter Card optimization
   twitter: {
     card: "summary_large_image",
-    title: "Shubham Jaiswal — Full-Stack Developer",
+    title: "Shubham Jaiswal — Full-Stack & AI Developer",
     description:
-      "Building modern web applications with React, Next.js, and Node.js",
-    images: ["https://www.shubhamz.xyz/og-image.png"],
-    creator: "@shubhamxgg", // Add your Twitter handle if you have one
+      "Building web apps & AI products with React, Next.js & Node.js. Freelance, remote-friendly. Based in India.",
+    images: ["/og-image.png"],
+    creator: "@shubhamxgg",
   },
 
-  // Additional SEO enhancements
   robots: {
     index: true,
     follow: true,
@@ -105,11 +130,8 @@ export const metadata: Metadata = {
     },
   },
 
-  // Verification for search consoles
   // verification: {
-  //   google: "your-google-verification-code", // Add your Google Search Console verification
-  //   // yandex: 'your-yandex-verification-code',
-  //   // bing: 'your-bing-verification-code',
+  //   google: "your-google-verification-code",
   // },
 };
 
