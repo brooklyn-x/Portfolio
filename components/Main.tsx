@@ -5,12 +5,10 @@ export const Main = () => {
         Shubham Jaiswal
       </h1>
       <p className="text-sm text-neutral-500 dark:text-neutral-400 italic mb-10">
-        Full-stack developer & AI engineer
+        Full-stack developer 
       </p>
       <p className="text-sm font-semibold text-pretty text-neutral-600 dark:text-neutral-400 leading-relaxed">
-      Full-stack developer & AI engineer building web apps and AI-powered products.
-      React, Next.js, Node.js, TypeScript. <br /> I ship things people use.
-      </p>
+      Hi, I'm Shubham — a full-stack developer with 2+ years of experience building web apps and AI-powered products. <br /> I work with React, Next.js, Node.js, and TypeScript. <br /> Available for freelance work. </p>
     </section>
   );
 };
